@@ -1,0 +1,33 @@
+FROM golang:1.13-alpine as build 
+
+RUN apk --update add \
+    go \
+    musl-dev
+RUN apk --update add \
+    util-linux-dev
+RUN apk add --no-cache tzdata
+RUN apk --update --no-cache add curl
+RUN apk add --no-cache ca-certificates git
+RUN echo $GOPATH
+WORKDIR /go/src/app/
+ENV GO111MODULE=on
+COPY go.mod /go/src/app/go.mod
+COPY go.sum /go/src/app/go.sum
+RUN go mod download 
+RUN go get github.com/gin-gonic/gin
+RUN go get github.com/jinzhu/gorm
+RUN go get go.elastic.co/apm/module/apmgin
+RUN go get go.elastic.co/apm/module/apmgorm 
+
+
+COPY . /go/src/app/.
+RUN go get -v 
+RUN go build -o app *.go
+
+
+FROM frolvlad/alpine-glibc
+WORKDIR /app
+COPY --from=build /go/src/app/app  /app/
+COPY --from=build /go/src/app/tennisATP.db /app/tennisATP.db
+EXPOSE 8000
+ENTRYPOINT ["/app/app"]

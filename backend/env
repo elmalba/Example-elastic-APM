@@ -1,0 +1,7 @@
+export ELASTIC_APM_SERVICE_NAME= backend
+
+export ELASTIC_APM_SERVER_URL=https://7f7d8ec9b82e482a88dd64e7d57f8e7c.apm.us-west1.gcp.cloud.es.io:443
+
+export ELASTIC_APM_SECRET_TOKEN=LRLAD0eyQFeYRxiao9
+
+export ELASTIC_APM_ENVIRONMENT= develop
