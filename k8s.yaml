@@ -37,11 +37,11 @@ spec:
         image: ensena/atp-backend
         env:
         - name: ELASTIC_APM_SERVICE_NAME
-          value: "Backend"
+          value: "backend-k8s"
         - name: ELASTIC_APM_SERVER_URL
-          value: "https://c5940086f5b242a986f777034652cdbe.apm.us-west1.gcp.cloud.es.io:443"
+          value: "https://54f4fdeaa1bf4d52b857c96ca785a140.apm.eastus2.azure.elastic-cloud.com:443"
         - name: ELASTIC_APM_SECRET_TOKEN
-          value: "xrazYnGP4YlBBrSzHT"
+          value: "edRKtuxGSqGFwXc3G5"
         ports:
         - containerPort: 8000
 ---
@@ -68,7 +68,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    targetPort: 8000
+    targetPort: 8080
     protocol: TCP
   selector:
     run: atp-backend

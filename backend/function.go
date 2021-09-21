@@ -1,6 +1,7 @@
-package main
+package atp
 
 import (
+	"atp/db"
 	"fmt"
 
 	"github.com/gin-gonic/gin"
@@ -12,7 +13,7 @@ type Player struct {
 	Point    int
 }
 
-func ranking(ctx *gin.Context) {
+func Ranking(ctx *gin.Context) {
 	var players []Player
 	var sql, query string
 	query = ctx.Request.URL.Query().Get("q")
@@ -23,6 +24,8 @@ func ranking(ctx *gin.Context) {
 
 	}
 
-	getDB(ctx).Raw(sql).Scan(&players)
+	db.GetDB(ctx).Raw(sql).Scan(&players)
+
+	fmt.Println("sql", sql)
 	ctx.JSON(200, players)
 }

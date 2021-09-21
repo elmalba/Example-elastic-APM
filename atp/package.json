@@ -2,7 +2,7 @@
   "name": "atp",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8000",
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "@elastic/apm-rum": "^5.8.0",
     "@testing-library/jest-dom": "^5.11.4",

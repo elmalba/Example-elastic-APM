@@ -6,7 +6,7 @@ const apm = initApm({
   serviceName: 'frontend',
 
   // Set custom APM Server URL (default: http://localhost:8200)
-  serverUrl: 'https://7f7d8ec9b82e482a88dd64e7d57f8e7c.apm.us-west1.gcp.cloud.es.io:443',
+  serverUrl: 'https://54f4fdeaa1bf4d52b857c96ca785a140.apm.eastus2.azure.elastic-cloud.com:443',
 
   // Set service version (required for sourcemap feature)
   serviceVersion: '0.1'

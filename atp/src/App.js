@@ -17,7 +17,7 @@ function App() {
     <Header>
       <div className="logo" />
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-        <Menu.Item key="1">Ranking</Menu.Item>
+        <Menu.Item key="1">Ranking UDP 2021 </Menu.Item>
       </Menu>
     </Header>
     <Content style={{ padding: '0 50px' }}>
@@ -30,7 +30,7 @@ function App() {
 
       </div>
     </Content>
-    <Footer style={{ textAlign: 'center' }}>Sistema de Ranking ATP</Footer>
+    <Footer style={{ textAlign: 'center' }}>Sistema de Ranking ATP de martes por la noche</Footer>
   </Layout>
   </>
   </div>
