@@ -23,6 +23,7 @@ type User struct {
 func init() {
 	var err error
 	db, err = apmgorm.Open("sqlite3", "tennisATP.db")
+	//db, err = gorm.Open("sqlite3", "tennisATP.db")
 	if err != nil {
 		log.Fatalln("EXIT PROBLEM DB", err)
 	}

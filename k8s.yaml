@@ -39,9 +39,9 @@ spec:
         - name: ELASTIC_APM_SERVICE_NAME
           value: "Backend"
         - name: ELASTIC_APM_SERVER_URL
-          value: "https://7f7d8ec9b82e482a88dd64e7d57f8e7c.apm.us-west1.gcp.cloud.es.io:443"
+          value: "https://c5940086f5b242a986f777034652cdbe.apm.us-west1.gcp.cloud.es.io:443"
         - name: ELASTIC_APM_SECRET_TOKEN
-          value: "LRLAD0eyQFeYRxiao9"
+          value: "xrazYnGP4YlBBrSzHT"
         ports:
         - containerPort: 8000
 ---

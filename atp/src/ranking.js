@@ -28,11 +28,11 @@ export default function Ranking (){
         const httpSpan = transaction.startSpan('GET ' + url, 'external.http')
         fetch(url)
         .then(response =>{
-        if (!response.ok) {
-             apm.captureError(new Error(`fetch failed with status ${response.status} ${response.statusText}`))
-        }
-        httpSpan.end()
-        transaction.end()
+         if (!response.ok) {
+              apm.captureError(new Error(`fetch failed with status ${response.status} ${response.statusText}`))
+         }
+         httpSpan.end()
+         transaction.end()
 
 
         return  response.json()

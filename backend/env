@@ -1,7 +1,10 @@
-export ELASTIC_APM_SERVICE_NAME= backend
+export ELASTIC_APM_SERVICE_NAME=backend
 
-export ELASTIC_APM_SERVER_URL=https://7f7d8ec9b82e482a88dd64e7d57f8e7c.apm.us-west1.gcp.cloud.es.io:443
+# Set custom APM Server URL (default: http://localhost:8200)
+export ELASTIC_APM_SERVER_URL=https://c5940086f5b242a986f777034652cdbe.apm.us-west1.gcp.cloud.es.io:443
 
-export ELASTIC_APM_SECRET_TOKEN=LRLAD0eyQFeYRxiao9
+# Use if APM Server requires a secret token
+export ELASTIC_APM_SECRET_TOKEN=xrazYnGP4YlBBrSzHT
 
-export ELASTIC_APM_ENVIRONMENT= develop
+# Set the service environment
+export ELASTIC_APM_ENVIRONMENT=develop
