@@ -34,6 +34,6 @@ func init() {
 
 func GetDB(ctx *gin.Context) *gorm.DB {
 	db := DB
-	db = DB.WithContext(ctx)
+	//db = DB.WithContext(ctx)
 	return db
 }
